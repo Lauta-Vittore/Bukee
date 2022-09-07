@@ -1,9 +1,0 @@
-.btnContactos{
-    width: 150px;
-    height: 45px;
-    background-color: map-get($map: $estilo, $key: colorLetra );
-    border-radius: 10px;
-    color: map-get($map: $estilo, $key: colorFondo);
-    font-size: 20px;
-    margin: 10px;
-}
