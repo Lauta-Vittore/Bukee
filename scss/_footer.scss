@@ -1,0 +1,64 @@
+/* css footer */
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 200px;
+    background-image: $color-nav-footer;
+    .infoFooter{
+        margin: auto 0px;
+        list-style:none
+    }
+    .logoRedes {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 500px;
+        justify-content: center;
+        @import "logo";
+        .logoName{
+            margin: 0 auto;
+        }
+        .redes {
+            display: inline-block;
+        }
+    }
+    .navegacionFooter{
+        margin: auto 0;
+        list-style:none
+    }
+       
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* termina css footer */

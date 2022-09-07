@@ -1,0 +1,111 @@
+/* css para categorias */
+main{
+    .categoria {
+        display: grid;
+        height: 800px;
+        grid-template-columns: 33% 33% 33%;
+        grid-template-rows: 33% 33% 33%;
+        grid-template-areas: 
+        "buzo zapatillas zapatillas"
+        "buzo cuellos remeras"
+        "buzo accesorio accesorio";
+        justify-content: center;
+        width: 100%;
+        .buzos {
+            grid-area: buzo;
+            background-image: url(../pic/buzo2.jpeg);
+            background-position: center;
+            background-size: cover;
+            margin: 10px;
+            justify-content: center;
+            text-align: center;
+            font-size: 50px;
+            color: rgb(0, 0, 0);
+            h4{
+                margin-top: 100px;
+            }
+        }
+        .buzos:hover{
+            opacity: 0.8;
+        }
+        .zapatillas{
+            grid-area: zapatillas;
+            background-color: yellowgreen;
+            margin: 10px;
+            background-image: url(../pic/zapatillas.jpg);
+            background-position: center;
+            background-size: cover;
+            justify-content: center;
+            text-align: center;
+            font-size: 100px;
+            color: black;
+        }
+        .zapatillas:hover{
+            opacity: 0.8;
+        }
+        .cuellos{
+            grid-area: cuellos;
+            background-color: rgb(50, 187, 205);
+            margin: 10px;
+            background-image: url(../pic/cuellito.jpeg);
+            background-position: center;
+            background-size: cover;
+            margin: 10px;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            font-size: 50px;
+            
+        }
+        .cuellos:hover{
+            opacity: 0.8;
+        }
+        .remeras{
+            grid-area: remeras;
+            background-color: rgb(205, 50, 192);
+            margin: 10px;
+            background-image: url(../pic/remera.jpg);
+            background-position: center;
+            background-size: cover;
+            margin: 10px;
+            justify-content: center;
+            text-align: center;
+            font-size: 50px;
+            color: black;
+        }
+        .remeras:hover{
+            opacity: 0.8;
+        }
+        .accesorios{
+            grid-area: accesorio;
+            background-color: rgb(211, 211, 211);
+            background-image: url(../pic/accesorio1-2.jpeg);
+            background-position-y: bottom;
+            background-size: cover;
+            margin: 10px;
+            justify-content: center;
+            text-align: center;
+            font-size: 50px;
+            color: rgb(255, 255, 255);
+        }
+        .accesorios:hover{
+            opacity: 0.8;
+        }
+        .btnVerCategoria{
+            width: 200px;
+            height: 50px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.418);
+            border-radius: 6px;
+            overflow: hidden;
+            font-size: 20px;
+        }
+        .tipoCategoria{
+            margin-top: 15px;
+            font-size: 45px;
+            text-align: center;
+            background-color: rgba(128, 128, 128, 0.39);
+        }
+    }
+}
+/* termina css para categorias */
