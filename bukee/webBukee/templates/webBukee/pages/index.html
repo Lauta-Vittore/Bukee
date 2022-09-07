@@ -1,0 +1,329 @@
+{% extends "webBukee/base.html" %}
+
+{% block title%} Home {% endblock %}
+
+
+{% block content %}
+{% load static %}
+<main>
+        
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <video src="{% static 'webBukee/pic/video.mp4' %}" class="d-block w-100" autoplay muted loop></video>
+            <!-- <img src="pic/Banner 1.png" class="d-block w-100" alt="..."> -->
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'webBukee/pic/Banner 2.png' %}" class="d-block w-100" alt="bannerPublicitario">
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'webBukee/pic/Banner3.png' %}" class="d-block w-100" alt="bannerPublicitario">
+          </div>
+        </div>
+       
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+        
+      </div>
+    <section class="infoCompra">
+        <button class="btnCompra"><img src="pic/tarjetaCredito.png" alt="tarjeta" width="50px"> Todas las tarjetas</button>
+        <button class="btnCompra"><img src="pic/envio.png" alt="envio" width="40px"> Envíos a todo el país</button>
+        <button class="btnCompra"><img src="pic/segura.png" alt="segura" width="40px"> Compra asegurada</button>
+    </section>
+    <section class="categoria" id="categorias">
+        <div class="buzos">
+                <h4 class="tipoCategoria">BUZOS</h4>
+                <a href="pages/productos.html#buzos"><button class="btnVerCategoria">Ver categoria</button></a>
+        </div>
+        <div class="zapatillas">
+            <h4 class="tipoCategoria">CALZADO</h4>
+            <a href="pages/productos.html#calzado"><button class="btnVerCategoria">Ver categoria</button></a>
+        </div>
+        <div class="cuellos">
+            <h4 class="tipoCategoria">CUELLITOS</h4>
+            <a href="pages/productos.html#cuellitos"><button class="btnVerCategoria">Ver categoria</button></a>
+        </div>
+        <div class="remeras">
+            <h4 class="tipoCategoria">REMERAS</h4>
+            <a href="pages/productos.html#remeras"><button class="btnVerCategoria">Ver categoria</button></a>
+        </div>
+        <div class="accesorios">
+            <h4 class="tipoCategoria">ACCESORIOS</h4>
+            <a href="pages/productos.html#accesorios"><button class="btnVerCategoria">Ver categoria</button></a>
+        </div>
+         
+        
+    </section>
+    <h1 class="titulo" id="paraTi">Productos para ti</h1>
+    <section class="paraTi">
+        <div class="container">
+            <div class="card">
+                
+                <div class="imgBx">
+                    
+                    <img src="../pic/buzo8.webp" alt="buzo rosa&negro">
+                    
+                </div>
+                <div class="contentBx">
+                    <div class="title">
+                        <h2>MaxiBuzo</h2>
+                    </div>
+                    <div class="color"> 
+                        <h3>Buzo de algodón frizado color rosa con mangas negras</h3>
+                    </div>
+                    <div class="size">
+                        <h3>tallas</h3>
+                        <span>S</span>
+                        <span>M</span>
+                        <span>L</span>
+                        <span>XL</span>
+                    </div>
+                    <div class="buy">
+                        <div class="price">
+                           
+                            <span>$651. <small>55</small> </span>
+                        </div>
+                        <ul class="action">
+                            <li><a href="#"><img src="../pic/carro-de-compras.png" alt="carrito" style="width: 20px;"></a><span>Añadir al carrito</span></li>
+                            
+                            <li><a href="#"><img src="../pic/ver.png" alt="ver" width="20px"></a><span>Ver producto</span></li>
+                            
+                            <li><a href="#"><img src="../pic/favorito.png" alt="fav" style="width: 20px;"></a><span>Favorito</span></li>
+                            
+                        </ul>
+                        <button class="btnVerProducto">Comprar</button>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+        <div class="container">
+            <div class="card">
+                <div class="imgBx">
+                    <img src="../pic/remera1.webp" alt="remera gris">
+                </div>
+                <div class="contentBx">
+                    <div class="title">
+                        <h2>Remera-Gris</h2>
+            
+                    </div>
+                    <div class="color"> 
+                        <h3>Remera modal color gris</h3>
+                    </div>
+                    <div class="size">
+                        <h3>tallas</h3>
+                        <span>S</span>
+                        <span>M</span>
+                        <span>L</span>
+                        <span>XL</span>
+                    </div>
+                    <div class="buy">
+                        <div class="price">
+                           
+                            <span>$651. <small>55</small> </span>
+                        </div>
+                        <ul class="action">
+                            <li><a href="#"><img src="../pic/carro-de-compras.png" alt="carrito" style="width: 20px;"></a><span>Añadir al carrito</span></li>
+                            
+                            <li><a href="#"><img src="../pic/ver.png" alt="ver" width="20px"></a><span>Ver producto</span></li>
+                            
+                            <li><a href="#"><img src="../pic/favorito.png" alt="fav" style="width: 20px;"></a><span>Favorito</span></li>
+                            
+                        </ul>
+                        <button class="btnVerProducto">Comprar</button>
+                    </div>
+                </div>
+            
+            </div>
+        </div>    
+        <div class="container">
+            <div class="card">
+                <div class="imgBx zapas">
+                    <img src="../pic/zapatillas3w.webp" alt="zapatillas naranja">
+                </div>
+                <div class="contentBx">
+                    <div class="title">
+                        <h2>Nike air max</h2>
+            
+                    </div>
+                    <div class="color"> 
+                        <h3>Zapatillas deportivas nike air max color naranja</h3>
+                    </div>
+                    <div class="size">
+                        <h3>tallas</h3>
+                        <span>36</span>
+                        <span>38</span>
+                        <span>40</span>
+                        <span>42</span>
+                    </div>
+                    <div class="buy">
+                        <div class="price">
+                           
+                            <span>$651. <small>55</small> </span>
+                        </div>
+                        <ul class="action">
+                            <li><a href="#"><img src="../pic/carro-de-compras.png" alt="carrito" style="width: 20px;"></a><span>Añadir al carrito</span></li>
+                            
+                            <li><a href="#"><img src="../pic/ver.png" alt="ver" width="20px"></a><span>Ver producto</span></li>
+                            
+                            <li><a href="#"><img src="../pic/favorito.png" alt="fav" style="width: 20px;"></a><span>Favorito</span></li>
+                            
+                        </ul>
+                        <button class="btnVerProducto">Comprar</button>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+    </section>
+    <h2 class="titulo" id="masVendidos">Más vendidos</h2>
+    <section class="paraTi">
+        <div class="container">
+            <div class="card">
+                <div class="imgBx zapas">
+                    <img src="../pic/zapatillas4w.webp" alt="zapatillas verde&celeste">
+                </div>
+                <div class="contentBx">
+                    <div class="title">
+                        <h2>Nike air max</h2>
+            
+                    </div>
+                    <div class="color"> 
+                        <h3>Zapatillas deportivas nike air max color verde&celeste</h3>
+                    </div>
+                    <div class="size">
+                        <h3>tallas</h3>
+                        <span>36</span>
+                        <span>38</span>
+                        <span>40</span>
+                        <span>42</span>
+                    </div>
+                    <div class="buy">
+                        <div class="price">
+                           
+                            <span>$651. <small>55</small> </span>
+                        </div>
+                        <ul class="action">
+                            <li><a href="#"><img src="../pic/carro-de-compras.png" alt="carrito" style="width: 20px;"></a><span>Añadir al carrito</span></li>
+                            
+                            <li><a href="#"><img src="../pic/ver.png" alt="ver" width="20px"></a><span>Ver producto</span></li>
+                            
+                            <li><a href="#"><img src="../pic/favorito.png" alt="fav" style="width: 20px;"></a><span>Favorito</span></li>
+                            
+                        </ul>
+                        <button class="btnVerProducto">Comprar</button>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+        <div class="container">
+            <div class="card">
+                <div class="imgBx">
+                    <img src="../pic/accesorio2-1w.webp" alt="accesorio" class="accesorio">
+                    <img src="../pic/accesorio2-2w.webp" alt="accesorio" class="accesorio2">
+                </div>
+                <div class="contentBx">
+                    <div class="title">
+                        <h2>Lexa Chain</h2>
+            
+                    </div>
+                    <div class="color"> 
+                        <h3>Arnés de lencería "Lexa Chain" regulable color rojo</h3>
+                    </div>
+                    <div class="size">
+                        <h3>tallas</h3>
+                        <span>Reg</span>
+                    </div>
+                    <div class="buy">
+                        <div class="price">
+                           
+                            <span>$651. <small>55</small> </span>
+                        </div>
+                        <ul class="action">
+                            <li><a href="#"><img src="../pic/carro-de-compras.png" alt="carrito" style="width: 20px;"></a><span>Añadir al carrito</span></li>
+                            
+                            <li><a href="#"><img src="../pic/ver.png" alt="ver" width="20px"></a><span>Ver producto</span></li>
+                            
+                            <li><a href="#"><img src="../pic/favorito.png" alt="fav" style="width: 20px;"></a><span>Favorito</span></li>
+                            
+                        </ul>
+                        <button class="btnVerProducto">Comprar</button>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+        <div class="container">
+            <div class="card">
+                
+                <div class="imgBx">
+                    
+                    <img src="../pic/cuellito5.webp" alt="cuellito celeste">
+                    
+                </div>
+                <div class="contentBx">
+                    <div class="title">
+                        <h2>Cuellito polar</h2>
+                    </div>
+                    <div class="color"> 
+                        <h3>Cuellito polar "infinito" color celeste</h3>
+                    </div>
+                    <div class="size">
+                        <h3>tallas</h3>
+                        <span>x</span>
+                        
+                    </div>
+                    <div class="buy">
+                        <div class="price">
+                           
+                            <span>$651. <small>55</small> </span>
+                        </div>
+                        <ul class="action">
+                            <li><a href="#"><img src="../pic/carro-de-compras.png" alt="carrito" style="width: 20px;"></a><span>Añadir al carrito</span></li>
+                            
+                            <li><a href="#"><img src="../pic/ver.png" alt="ver" width="20px"></a><span>Ver producto</span></li>
+                            
+                            <li><a href="#"><img src="../pic/favorito.png" alt="fav" style="width: 20px;"></a><span>Favorito</span></li>
+                            
+                        </ul>
+                        <button class="btnVerProducto">Comprar</button>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+        
+    </section>
+    
+<!-- Modal -->
+<div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="whatsapp">
+      
+      <h5 class="modal-title" id="exampleModalLabel"><img src="pic/perfilWp.webp" alt="perfil" style="width:50px ;"> Bukee Soporte </h5>
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-bodyWp">
+      <div class="chat">
+        <h2 class="nombreChat">Bukee Indumentaria</h2>
+        <p class="mensaje">Hola! ¿Cómo podemos ayudarte?</p>
+        <p class="hora">16:52</p>
+      </div>
+    </div>
+    <div class="modal-footer">
+     <button type="button" href="https://api.whatsapp.com/send?phone=3541337512&text=Necesito%20ayuda%20en%20" class="btnChat"><img src="pic/whatsapp.png" alt="wp" style="width: 20px;"> Empezar chat</button>
+    </div>
+  </div>
+</div>
+</div>
+</main>
+{% endblock content %}
+

@@ -1,0 +1,127 @@
+/* css para nav */
+.row{
+    width: 100%;
+    margin: 0;
+    .navbar{
+        background-image: $color-nav-footer;
+        a {
+            color: white;
+            text-decoration: none;
+        }
+        a:hover{
+            color: black;
+        } 
+        @import "logo";
+        .navbar-toggler{
+            margin-right: 50px;
+        }
+        .collapse{
+            color: white; 
+            justify-content: space-between;
+            width: 100%;
+            .conteiner{
+                ul{
+                    justify-content: center;
+                }
+                .navbar-nav{
+                    a{
+                        color: white;
+                    }
+                    .dropdown-menu a{
+                        color: black;
+                    }
+                }
+            }
+            .cuenta{
+                text-align: center;
+                .btnCuenta{
+                    width: 100px;
+                    height: 40px;
+                    background-color: $color-primario;
+                    border: 2px solid $borde-boton;
+                    border-radius: 7px;
+                    font-size: 19px;
+                }
+                .btnCarrito{
+                    width: 30px;
+                    height: 40px;
+                    background-color: $color-primario;
+                    border: 2px solid $borde-boton;
+                    border-radius: 7px;
+                    margin-left: 5px;
+                    .imgCarrito {
+                        width: 16px;
+                        height: 16px;
+                        margin: 0 auto;
+                    }
+                }
+            }
+            .conteinerBuscador{
+                margin-left: 10px;
+                width: 30px;
+                height: 30px;
+                position: relative;
+                border-radius: 30px;
+                border: 2px solid black;
+                transition: all 500ms ease;
+            }
+            
+            input{
+                width: 90%;
+                height: 100%;
+                background: transparent;
+                outline: 0;
+                border-style: none;
+                font-size: 25px;
+                font-weight: 100;
+                font-family: Arial, Helvetica, sans-serif;
+                color: white;
+                padding: 0 20px;
+                box-sizing: border-box;
+                &::placeholder{
+                    font-size: 17px;
+                }
+                
+            }
+            
+            label{
+                position: absolute;
+                right: 12px;
+                top: 0;
+                width: 10%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 25px;
+                color: transparent;
+                transform: rotateZ(-90deg);
+                transition: all 1s ease;
+                cursor: pointer;
+                
+            }
+            
+            
+            /* span{
+                position: absolute;
+                left: calc(50% - 2px);
+                top: 60px;
+            } */
+            
+            .conteinerBuscador:hover{
+                width: 33%;
+            }
+            
+            .conteinerBuscador:hover span{
+                width: 0;
+            }
+            
+            .conteinerBuscador:hover label{
+                color: white;
+                transform: rotateZ(0deg);
+            }
+            
+        }
+    }
+}
+/* termina css para nav */

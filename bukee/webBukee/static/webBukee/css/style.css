@@ -1,0 +1,623 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: rgba(212, 212, 212, 0.801);
+    width: 100%;
+}
+/* --------------------css para la navbar--------------------- */
+.row{
+    width: 100%;
+    margin: 0;
+}
+.navbar{
+        background-image: linear-gradient(to right, orange, black);
+}
+/* .logoNav{
+    margin: auto 0;
+} */
+.name{
+    font-family: 'Cedarville Cursive', cursive;
+    font-size: 50px;
+    margin-left: 50px;
+    color: black;
+}
+.navbar-nav a{
+    color: white;
+}
+.collapse{
+    color: white;
+    margin-left: 50px;
+    margin-top: 10px;
+}
+.btnCuenta{
+    width: 100px;
+    height: 40px;
+    background-color: orange;
+    border: 2px solid rgba(255, 68, 0, 0.575);
+    border-radius: 7px;
+    font-size: 19px;
+}
+.cuenta{
+    text-align: center;
+}
+.conteiner ul{
+    justify-content: center;
+}
+.navbar-toggler{
+    margin-right: 50px;
+}
+.btnCarrito{
+    width: 30px;
+    height: 40px;
+    background-color: orange;
+    border: 2px solid rgba(255, 68, 0, 0.575);
+    border-radius: 7px;
+    margin-left: 5px;
+}
+.imgCarrito {
+    width: 16px;
+    height: 16px;
+    margin: 0 auto;
+}
+.dropdown-menu a{
+    color: black;
+}
+a {
+    color: white;
+    text-decoration: none;
+}
+a:hover{
+    color: black;
+} 
+
+/* ---------------------css para infoCompras----------------------------- */
+
+.infoCompra{
+    display: flex;
+    justify-content: space-around;
+    height: 150px;
+    margin-top: 30px;
+}
+
+.btnCompra {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    width: 33%;;
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    background-color: rgba(255, 254, 253, 0.712);
+    border: 2px solid rgb(0, 0, 0);
+}
+
+/* --------------------- termina css para infoCompras----------------------------- */
+/* ---------------------css para Productos para ti----------------------------- */
+
+.titulo{
+    margin-left: 10px;
+}
+
+.paraTi {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    overflow: hidden;
+}
+.masVendidos {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    overflow: hidden;
+}
+
+.seccionProductos{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    overflow: hidden;
+}
+
+h3{
+    margin: 5px;
+}
+
+
+
+
+/* ---------------------final css para Productos para ti----------------------------- */
+/* ---------------------css para footer----------------------------- */
+footer {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 200px;
+    background-image: linear-gradient(to right, orange, black);
+    
+       
+}
+.infoFooter{
+    margin: auto 0px;
+    list-style:none
+}
+.logoRedes {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 500px;
+    justify-content: center;
+}
+ .redes {
+    display: inline-block;
+}
+.navegacionFooter{
+    margin: auto 0;
+    list-style:none
+}
+
+.logoName{
+    margin: 0 auto;
+}
+/* ---------------------css para footer----------------------------- */
+/* ---------------------css para categorias----------------------------- */
+.categoria {
+    display: grid;
+    height: 600px;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: 
+    "buzo zapatillas zapatillas"
+    "buzo cuellos remeras";
+    justify-content: center;
+    width: 100%;
+}
+.tipoCategoria{
+    font-size: 70px;
+    text-align: center;
+}
+
+.buzos {
+    grid-area: buzo;
+    background-image: url(../pic/buzo.jpeg);
+    background-position: center;
+    background-size: cover;
+    margin: 10px;
+    justify-content: center;
+    text-align: center;
+    font-size: 100px;
+    overflow: hidden;
+}
+.buzos:hover{
+    opacity: 0.8;
+}
+.btnVerCategoria{
+    width: 200px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.075);
+    border-radius: 6px;
+    overflow: hidden;
+    font-size: 20px;
+}
+
+.zapatillas{
+    grid-area: zapatillas;
+    background-color: yellowgreen;
+    margin: 10px;
+    background-image: url(../pic/zapatillas.jpg);
+    background-position: center;
+    background-size: cover;
+    justify-content: center;
+    text-align: center;
+    font-size: 100px;
+    overflow: hidden;
+}
+.zapatillas:hover{
+    opacity: 0.8;
+}
+.cuellos{
+    grid-area: cuellos;
+    background-color: rgb(50, 187, 205);
+    margin: 10px;
+    background-image: url(../pic/cuellito.jpeg);
+    background-position: center;
+    background-size: cover;
+    margin: 10px;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-size: 50px;
+    overflow: hidden;
+}
+.cuellos:hover{
+    opacity: 0.8;
+}
+.remeras{
+    grid-area: remeras;
+    background-color: rgb(205, 50, 192);
+    margin: 10px;
+    background-image: url(../pic/remera.jpg);
+    background-position: center;
+    background-size: cover;
+    margin: 10px;
+    justify-content: center;
+    text-align: center;
+    font-size: 50px;
+    overflow: hidden;
+}
+.remeras:hover{
+    opacity: 0.8;
+}
+
+/* CSS PARA PREGUNTAS FRECUENTES */
+h1{
+    margin: 15px;
+    font-size: 25px;
+}
+.preguntasFrecuentes{
+    background-image: url(../pic/preguntas-frecuentes.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.pregunta {
+    border-radius: 20px;
+    height: auto;
+}
+.pregunta h2{
+    margin: 20px;
+}
+
+.preguntaNaranja {
+    background-color: rgba(255, 166, 0, 0.678);
+    width: 90%;
+    margin: 0 auto;
+    
+}
+.preguntaNegro {
+    background-color: rgba(136, 88, 0, 0.685);
+    color: rgb(255, 255, 255);
+    width: 80%;
+    margin: 0 auto;
+}
+.pregunta h2 {
+    text-align: center;
+    margin-top: 35px;
+}
+.respuesta{
+    margin: 0 auto;
+    width: 50%;
+    background-color: orange;
+    border-radius: 20px;
+}
+.contactar{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    margin-top:100px ;
+}
+.btnContactar {
+    background-color: black;
+    color: white;
+    width: 100px;
+    height: 30px;
+    margin-left: 25px;
+    border-radius: 6px;
+}
+/* TERMINA CSS PARA PREGUNTAS FRECUENTES */
+/* CSS PARA CONTACTO */
+.conteinerContactos {
+    display: grid;
+    height: auto;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 30% 40% 30%;
+    grid-template-areas: 
+    "texto contacto"
+    "formulario contacto"
+    "suscribite contacto";
+}
+.formContacto {
+    grid-area: texto;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+}
+.formContact{
+    grid-area: formulario;
+    width: 90%;
+    margin: 3px auto;
+    text-align: center;
+}
+#nombre {
+    width: 100%;
+    height: 45px;
+    font-size: 25px;
+}
+#email {
+    width: 50%;
+    height: 35px;
+    font-size: 25px;
+}
+#telefono {
+    width: 40%;
+    height: 35px;
+    font-size: 25px;
+    margin: 10px
+}
+#mensaje{
+    width: 100%;
+    height: 45px;
+    font-size: 25px;
+}
+
+.btnFormContacto{
+    width: 25%;
+    height: 45px;
+    background-color: orange;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    margin: 10px;
+}
+
+.contactos {
+    grid-area: contacto;
+    background-image: url(../pic/img-contactanos.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 90%;
+    background-position-y: 400px;
+    background-color: rgba(255, 166, 0, 0.651);
+    margin: auto 0 auto auto;
+    font-size: 20px;
+    width: 100%;
+    height: 600px;
+    text-align: center;
+}
+.li{
+    margin-top: 30px;
+    list-style:none;
+}
+.suscribite {
+    grid-area: suscribite;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+}
+.suscribite h3{
+    margin-bottom: 10px;
+}
+#suscribite{
+    width: 80%;
+    height: 25px;
+}
+.btn2{
+    width: 100px;
+    height: 30px;
+    background-color: orange;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+/*  TERMINA CSS PARA CONTACTO */
+/* css cards productos */
+.card:hover .imgProducto{
+    transform: scale(1.5);
+}
+.card{
+    width: 30%;
+    overflow: hidden;
+    
+}
+.imgProducto{
+    width: 100%;
+    transition: 0.5s;
+}
+.conteinerImg{
+    overflow: hidden;
+}
+.btn{
+    display: none;
+}
+.action{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.action li{
+    position: relative;
+    list-style: none;
+    width: 40px;
+    height: 40px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4px;
+    cursor: pointer;
+    opacity: 0;
+    transition: 0.5s;
+
+}
+.action li:hover{
+    background-color: red;
+    color: white;
+}
+.card:hover li{
+    opacity: 1;
+}
+.card .action li span{
+    position: absolute;
+    right: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    white-space: nowrap;
+    padding: 4px 60px;
+    background-color: white;
+    color: #333;
+    font-weight: 500;
+    font-size: 12px;
+    border-radius: 4px;
+    pointer-events: none;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.card .action li:hover span{
+    opacity: 1;
+}
+
+.btnVerProducto{
+    background-image: linear-gradient(to right, orange, rgb(255, 136, 0));
+    border-radius: 6px;
+    color: white;
+    font-weight: 700;
+    width: 60%;
+    height: 35px;
+    transition: 0.1s;
+    float: right;
+    font-size: 15px;
+
+}
+.btnVerProducto:hover{
+    background-image: linear-gradient(to right, black , orange);
+}
+.precio{
+    margin-left: 10px;
+    color: green;
+}
+.card-text{
+    text-align: center;
+}
+
+/* fin css cards productos */
+/* CSS PARA SOBRE NOSOTROS */
+.sobreNosotros {
+    width: 100%;
+    text-align: center;
+    background-color: white;
+}
+.imgSobreNosotros{
+    width: 90%;
+}
+
+
+@media(max-width:768px){
+    body{
+        width: 100%;
+    }
+    .inicio{
+        font-size: 13px;
+        margin-left: 1px;
+    }
+    .name{
+        font-size: 25px;
+    }
+    .buscar{
+        width: 100%;
+    }
+    .preguntas{
+        display: none;
+    }
+    .btn {
+        display: none;
+    }
+    .infoCompra{
+        width: 100%;
+        height: auto;
+        margin: 20px auto;
+    }
+    .carousel{
+        width: 100%;
+    }
+    .btnCompra{
+        font-size: small;
+        height: 90px;
+        margin: 0 auto;
+    }
+    .paraTi{
+        display: none;
+    }
+    .masVendidos{
+        display: none;
+    }
+    .titulo{
+        display: none;
+    }
+    .categoria {
+        display: grid;
+        height: 700px;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 33% 33% 33% ;
+        grid-template-areas: 
+        "buzo cuellos"
+        "buzo remeras"
+        "zapatillas zapatillas";
+        width: 100%;
+    }
+    .tipoCategoria{
+        font-size: 50%;
+        margin-top: 10px;
+    }
+    .btnVerCategoria{
+        width: 50%;
+        height: 30px;
+        font-size: 15px;
+    }
+    /* productos */
+    .seccionProductos{
+        width: 100%;
+        flex-direction: column;  
+    }
+    .card{
+        margin: 10px auto;
+        width: 80%;
+    }.conteinerPagProductos:hover{
+        width: 90%;
+    }
+    .conteinerPagProductos h3{
+        font-size: 80%;
+    }
+    
+    /* contacto */
+    .conteinerContactos {
+        grid-template-columns: 100%;
+        grid-template-rows: 10% 30% 25% 10% 20%;
+        grid-template-areas: 
+        "texto"
+        "formulario"
+        "suscribite"
+        " contacto"
+        " contacto";
+        overflow: hidden;
+    }
+    .contactos{
+        width: 100%;
+        background-image: none;
+    }
+    .formContacto h1{
+        font-size: 15px;
+        margin: 10px;
+    }
+    #nombre{
+        width: 80%;
+        height: 30px;
+    }
+    #email{
+        width: 80%;
+        height: 30px;
+    }
+    #telefono{
+        width: 80%;
+        height: 30px;
+    }
+    #mensaje{
+        width: 80%;
+        height: 30px;
+    }
+}
