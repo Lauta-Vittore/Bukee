@@ -16,11 +16,22 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from webBukee import views
+from django.conf import settings
+from productos import views as productos_views
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name="home"),
     path('index/', views.index, name="index"),
     path('contacto/', views.contacto, name="contacto"),
+    path('preguntas/', views.preguntas, name="preguntas"),
+    path('nosotros/', views.nosotros, name="nosotros"),
+    path('productos/', views.productos, name="productos"),
+    path('producto/',productos_views.producto, name="producto"),
 
 ]
+
+if settings.DEBUG:
+    from django.conf.urls.static import static
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -36,7 +36,7 @@
                         <a class="nav-link" aria-current="page" href="{% url 'index'%}">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="pages/productos.html">Productos</a>
+                        <a class="nav-link" href="{% url 'productos' %}">Productos</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'contacto' %}">Contacto</a>
@@ -46,8 +46,8 @@
                         Más
                         </a>
                         <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="pages/sobreNosotros.html">Sobre Nosotros</a></li>
-                        <li><a class="dropdown-item" href="pages/preguntas.html">Preguntas frecuentes</a></li>
+                        <li><a class="dropdown-item" href="{% url 'nosotros' %}">Sobre Nosotros</a></li>
+                        <li><a class="dropdown-item" href="{% url 'preguntas' %}">Preguntas frecuentes</a></li>
                         <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal3">Contacto Soporte</a></li>
                         </ul>
                     </li>
@@ -64,7 +64,28 @@
     {%block content %}
 
     {% endblock content %}
-    
+    <!-- Modal -->
+<div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="whatsapp">
+          
+          <h5 class="modal-title" id="exampleModalLabel"><img src="../pic/perfilWp.webp" alt="perfil" style="width:50px ;"> Bukee Soporte </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-bodyWp">
+          <div class="chat">
+            <h2 class="nombreChat">Bukee Indumentaria</h2>
+            <p class="mensaje">Hola! ¿Cómo podemos ayudarte?</p>
+            <p class="hora">16:52</p>
+          </div>
+        </div>
+        <div class="modal-footer">
+         <button type="button" href="https://api.whatsapp.com/send?phone=3541337512&text=Necesito%20ayuda%20en%20" class="btnChat"><img src="../pic/whatsapp.png" alt="" style="width: 20px;"> Empezar chat</button>
+        </div>
+      </div>
+    </div>
+  </div>
     <footer>
         <ul class="infoFooter">
             <li><a href="pages/sobreNosotros.html">Sobre nosotros</a></li>
@@ -88,7 +109,7 @@
             <li><a href="pages/preguntas.html">Preguntas frecuentes</a></li>
         </ul>
     </footer>
-    <a class="btnWhatsapp" data-bs-toggle="modal" data-bs-target="#exampleModal3"><img src="pic/whatsapp.png" alt="" style="width: 60px;"></a> 
+    <a class="btnWhatsapp" data-bs-toggle="modal" data-bs-target="#exampleModal3"><img src="{%static 'webBukee/pic/whatsapp.png' %}" alt="" style="width: 60px;"></a> 
     
 <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>

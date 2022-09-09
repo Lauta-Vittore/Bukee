@@ -1,0 +1,66 @@
+{% extends "webBukee/base.html" %}
+
+{% block title%} Productos {% endblock %}
+
+{% block content %}
+{% load static %}
+
+
+   
+        <div class="conteinerTitulo2">
+        <h1 class="titulo2" id="buzos">Buzos</h1></div><hr>
+        <section class="seccionProductos">
+                {% for producto in producto %}
+                    <div class="container">
+                        <div class="card">
+                            <div class="imgBx">
+                                <img src="{{producto.imagenproducto.url}}" alt="">
+                            </div>
+                            <div class="contentBx">
+                                <div class="title">
+                                    <h2>{{producto.nombreproducto}}</h2>
+                        
+                                </div>
+                                <div class="color"> 
+                                    <h3>{{producto.descripcionproducto}}</h3>
+                                </div>
+                                <div class="size">
+                                    <h3>tallas</h3>
+                                    {% if producto.talla1 %}
+                                        <span>{{producto.talla1}}</span>
+                                    {% endif %}
+                                    {% if producto.talla2 %}
+                                        <span>{{producto.talla2}}</span>
+                                    {% endif %}
+                                    {% if producto.talla3 %}
+                                        <span>{{producto.talla3}}</span>
+                                    {% endif %}
+                                    {% if producto.talla4 %}
+                                        <span>{{producto.talla4}}</span>
+                                    {% endif %}
+                                </div>
+                                <div class="buy">
+                                    <div class="price">
+                                    
+                                        <span>${{producto.precioproducto}}</span>
+                                    </div>
+                                    <ul class="action">
+                                        <li><a href="#"><img src="../pic/carro-de-compras.png" alt="" style="width: 20px;"></a><span>Añadir al carrito</span></li>
+                                        
+                                        <li><a href="#"><img src="../pic/ver.png" alt="" width="20px"></a><span>Ver producto</span></li>
+                                        
+                                        <li><a href="#"><img src="../pic/favorito.png" alt="" style="width: 20px;"></a><span>Favorito</span></li>
+                                        
+                                    </ul>
+                                    <button class="btnVerProducto">Comprar</button>
+                                </div>
+                            </div>
+                        
+                        </div>
+                    </div>
+                    {% endfor %} 
+                  
+        
+    </section>
+
+{% endblock %}
