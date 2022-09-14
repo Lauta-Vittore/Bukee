@@ -1,0 +1,47 @@
+
+
+
+<div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasRightLabel">Tu carrito</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    
+          
+        {% if request.session.carrito.items %}
+        <ul class="list-group list-group-horizontal row">
+          <li class="list-group-item col-4">NOMBRE</li>
+          <li class="list-group-item col-4">PRECIO</li>
+          <li class="list-group-item col-4">CANTIDAD</li>
+        </ul>
+        {% for key, value in request.session.carrito.items %}
+        <div class="container">
+          <ul class="list-group-horizontal row">
+            <li class="col-4">{{value.nombre}}</li>
+            <li class="col-4">{{value.acumulado}}</li>
+            <li class="col-4">
+              <a href="{% url 'Add' value.producto_id %}" class="badge btn btn-dark badge-dark">+</a>{{value.cantidad}}
+              <a href="{% url 'Sub' value.producto_id %}" class="badge btn btn-dark badge-dark">-</a></li>
+          </ul>
+        </div>
+        {% endfor %}
+        {% else %}
+        <tr>
+            <td colspan="3">
+                <div class="alert alert-danger text-center"> Sin Productos </div>
+            </td>
+        </tr>
+        {% endif %}
+          <tr>
+            <th scope="row">Total:</th>
+            <td colspan="2">$ {{total_carrito}}</td>
+          </tr>
+      <hr>
+      <div class="row text-center">
+          <div class="col-6"><a href="{% url 'CLS' %}" class="btn btn-danger">Limpiar</a></div>
+          <div class="col-6"><a href="#" class="btn btn-success">Guardar</a></div>
+      </div>
+  </div>
+</div>
+

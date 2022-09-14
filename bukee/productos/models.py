@@ -11,7 +11,7 @@ class Producto(models.Model):
     talla3 = models.ForeignKey(Tallas, models.DO_NOTHING, db_column='talla3', blank=True, related_name='talla3')
     talla4 = models.ForeignKey(Tallas, models.DO_NOTHING, db_column='talla4', blank=True, related_name='talla4')
     tipoproducto = models.ForeignKey(Categorias, models.DO_NOTHING, db_column='tipoProducto', blank=True, null=True)  # Field name made lowercase.     
-    precioproducto = models.TextField(db_column='precioProducto')  # Field name made lowercase. This field type is a guess.
+    precioproducto = models.IntegerField(db_column='precioProducto')  # Field name made lowercase. This field type is a guess.
     imagenproducto = models.ImageField(upload_to='projects',verbose_name="Imagen",null=True, blank=True)  # Field name made lowercase. This field type is a guess. 
 
     class Meta:
@@ -20,6 +20,6 @@ class Producto(models.Model):
         verbose_name= 'Productos'
 
     def __str__(self):
-        return self.nombreproducto
+        return f'{self.nombreproducto} -> {self.precioproducto}'
 
 

@@ -6,11 +6,12 @@
 {% load static %}
 
 
-   
+{% for tipo in tipo %}
         <div class="conteinerTitulo2">
-        <h1 class="titulo2" id="buzos">Buzos</h1></div><hr>
+        <h1 class="titulo2" id="buzos">{{tipo}}</h1></div><hr>
         <section class="seccionProductos">
                 {% for producto in producto %}
+                {% if tipo == producto.tipoproducto %}
                     <div class="container">
                         <div class="card">
                             <div class="imgBx">
@@ -52,15 +53,19 @@
                                         <li><a href="#"><img src="../pic/favorito.png" alt="" style="width: 20px;"></a><span>Favorito</span></li>
                                         
                                     </ul>
-                                    <button class="btnVerProducto">Comprar</button>
+                                    <a href="{% url 'Add' producto.idproducto %}"><button class="btnVerProducto">Comprar</button></a>
                                 </div>
                             </div>
                         
                         </div>
                     </div>
+                    {% endif %}
                     {% endfor %} 
+                    
                   
         
     </section>
 
+    {% endfor %} 
+    {% include "CarritoApp/carrito.html" %}
 {% endblock %}
