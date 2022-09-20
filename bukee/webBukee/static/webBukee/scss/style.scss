@@ -21,7 +21,7 @@ body{
     .btnWhatsapp{
         position: fixed;
         line-height: 55px;
-        bottom: 30px;
+        bottom: 30px; 
         right: 30px;
         img{
             position: fixed;
@@ -292,7 +292,7 @@ body{
 }
 @import "footer";
 
-
+@import "carrito";
 /* VISTA PARA MOVILE */
 
 @media(max-width:768px){

@@ -6,22 +6,22 @@
     <h5 class="offcanvas-title" id="offcanvasRightLabel">Tu carrito</h5>
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
-  <div class="offcanvas-body">
+  <div class="offcanvas-body carrito">
     
           
         {% if request.session.carrito.items %}
-        <ul class="list-group list-group-horizontal row">
-          <li class="list-group-item col-4">NOMBRE</li>
-          <li class="list-group-item col-4">PRECIO</li>
-          <li class="list-group-item col-4">CANTIDAD</li>
+        <ul class="row descripcionCarrito">
+          <li class="col-4">NOMBRE</li>
+          <li class="col-4">PRECIO</li>
+          <li class="col-4">CANTIDAD</li>
         </ul>
         {% for key, value in request.session.carrito.items %}
-        <div class="container">
+        <div class="container productoCarrito">
           <ul class="list-group-horizontal row">
             <li class="col-4">{{value.nombre}}</li>
-            <li class="col-4">{{value.acumulado}}</li>
+            <li class="col-4">${{value.acumulado}}</li>
             <li class="col-4">
-              <a href="{% url 'Add' value.producto_id %}" class="badge btn btn-dark badge-dark">+</a>{{value.cantidad}}
+              <a href="{% url 'Add' value.producto_id %}" class="badge btn btn-dark badge-dark">+</a><p>{{value.cantidad}}</p>
               <a href="{% url 'Sub' value.producto_id %}" class="badge btn btn-dark badge-dark">-</a></li>
           </ul>
         </div>

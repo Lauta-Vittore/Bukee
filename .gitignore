@@ -1,4 +1,4 @@
 venv/
 /__pycache__/
-
+bukee/webBukee/static/webBukee/node_modules/
 *.pyc

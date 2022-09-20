@@ -1,5 +1,6 @@
 from django.shortcuts import render, HttpResponse
-
+from productos.models import Producto
+from .models import Categorias
 # Create your views here.
 
 def home(request):
@@ -19,3 +20,8 @@ def nosotros(request):
 
 def productos(request):
     return render(request, "productos/productos.html")
+
+def producto(request):
+    tipo = Categorias.objects.all()
+    producto = Producto.objects.all()
+    return render(request, "webBukee/base.html", {'producto':producto, 'tipo': tipo})
