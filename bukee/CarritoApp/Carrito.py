@@ -1,3 +1,5 @@
+from productos.models import Producto
+
 class Carrito:
     def __init__(self, request):
         self.request = request
@@ -16,7 +18,7 @@ class Carrito:
                 "producto_id": producto.idproducto,
                 "nombre": producto.nombreproducto,
                 "acumulado": producto.precioproducto,
-                "cantidad": 1,    
+                "cantidad": 1,
             }
             
         else:

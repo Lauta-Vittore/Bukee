@@ -12,7 +12,7 @@ class Producto(models.Model):
     talla4 = models.ForeignKey(Tallas, models.DO_NOTHING, db_column='talla4', blank=True, related_name='talla4')
     tipoproducto = models.ForeignKey(Categorias, models.DO_NOTHING, db_column='tipoProducto', blank=True, null=True)  # Field name made lowercase.     
     precioproducto = models.IntegerField(db_column='precioProducto')  # Field name made lowercase. This field type is a guess.
-    imagenproducto = models.ImageField(upload_to='projects',verbose_name="Imagen",null=True, blank=True)  # Field name made lowercase. This field type is a guess. 
+    imagenproducto = models.ImageField(upload_to='projects',verbose_name="Imagen",null=True, blank=True, db_column='imagenProducto')  # Field name made lowercase. This field type is a guess. 
 
     class Meta:
         managed = False

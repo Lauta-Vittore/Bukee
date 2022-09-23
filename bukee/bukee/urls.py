@@ -18,7 +18,7 @@ from django.urls import path
 from webBukee import views
 from django.conf import settings
 from productos import views as productos_views
-from CarritoApp.views import agregar_producto, eliminar_producto, restar_producto, limpiar_carrito
+from CarritoApp.views import agregar_producto, eliminar_producto, restar_producto, limpiar_carrito, carrito
 
 
 urlpatterns = [
@@ -34,6 +34,7 @@ urlpatterns = [
     path('eliminar/<int:producto_id>/', eliminar_producto, name="Del"),
     path('restar/<int:producto_id>/', restar_producto, name="Sub"),
     path('limpiar/', limpiar_carrito, name="CLS"),
+     path('carrito/', carrito , name="carrito"),
 
 ]
 

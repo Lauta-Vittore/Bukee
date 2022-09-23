@@ -28,3 +28,6 @@ def limpiar_carrito(request):
     carrito = Carrito(request)
     carrito.limpiar()
     return redirect("producto")
+
+def carrito(request):
+    return render(request, "CarritoApp/carrito.html")
